@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Сайт рецептов{% endblock %}</title>
+    <a href="{% url 'index' %}">Home</a>
+    <a href="{% url 'about' %}">About</a>
+    <a href="{% url 'recipe_search' %}">Поиск рецепта по названию</a>
+</head>
+<body>
+    {% block content %}
+
+    Контент скоро появится...
+    {% endblock %}
+</body>
+</html>

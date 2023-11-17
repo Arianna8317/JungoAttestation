@@ -1,0 +1,9 @@
+{% extends 'mainapp/base.html' %}
+{% block content %}
+<h2>Введите название рецепта</h2>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Найти</button>
+</form>
+{% endblock %}
