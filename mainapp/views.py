@@ -42,7 +42,7 @@ def recipe_search(request):
 
 class RecipeListView(ListView):
     model = models.Recipe
-    template_name = 'recipes/index.html'
+    template_name = 'mainapp/home.html'
     context_object_name = 'recipes'
 
 

@@ -20,6 +20,8 @@
       <div class="container">
         <a class="navbar-brand" href="{% url 'index' %}">Основная страница</a>
         <a class="navbar-brand" href="{% url 'about' %}">О сайте</a>
+        
+        
         <button
           class="navbar-toggler"
           type="button"
@@ -47,6 +49,13 @@
                   href="{% url 'recipes-create' %}">Добавить рецепт</a>
                 >
               </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  aria-current="page"
+                  href="{% url 'recipes-home' %}">Все рецепты</a>
+                >
+              </li> 
           </ul>
         </div>
         <div class="navbar-nav">
