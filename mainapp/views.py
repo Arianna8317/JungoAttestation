@@ -20,6 +20,10 @@ def index(request):
     random_5 = Recipe.objects.order_by('?')[:5]
     return render(request, 'mainapp/index.html',  {'recipes': random_5})
 
+def home(request):
+    recipes = models.Recipe.objects.all()
+    
+    return render(request, 'mainapp/home.html', {'recipes': recipes})
 
 def recipe_search(request):
     if request.method == 'POST':
