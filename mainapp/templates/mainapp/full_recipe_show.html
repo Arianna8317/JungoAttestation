@@ -1,12 +1,16 @@
 {% extends 'mainapp/base.html' %}
 {% block title %}Рецепт{% endblock %}
 {% block content %}
-<h1>Название рецепта : {{ recipe.name }}</h1>
-<p>Категория : {{recipe.category }}</p>
-<p>Краткое описание : <br>{{ recipe.description }}</p>
-<p>Ингридиенты : <br>{{ recipe.ingredients }}</p>
-<p>Инструкция по выполнению :<br> {{ recipe.steps }}</p>
-<p>Время приготовления : {{ recipe.time}} минут</p>
+<div class="card my-4">
+    <div class="card-body">
+    <h3>Название рецепта : {{ recipe.name }}</h3> 
+    <h5>{{recipe.category }}</h5>
+    <h4>Краткое описание : {{ recipe.description }}</h4>
+    <p>Ингридиенты : <br>{{ recipe.ingredients }}</p>
+    <p>Инструкция по выполнению :<br> {{ recipe.steps }}</p>
+    <p>Время приготовления : {{ recipe.time}} минут</p>
+    </div>
+</div>    
 {% endblock %}
 
 

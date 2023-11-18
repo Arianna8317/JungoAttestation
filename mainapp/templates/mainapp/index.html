@@ -3,15 +3,16 @@
 {% block content %}
 <h2>Добро пожаловать на сайт кулинарных рецептов</h2>
 <h3>Вашему вниманию предлагаются 5 случайных рецептов с нашего сайта</h3>
-_______________________________________________ <br>
     {% for recipe in recipes %}
-    <p> 
+    <div class="card my-4">
+        <div class="card-body">
+     
         Название : {{ recipe.name }}<br>
-        Категория : {{ recipe.category }}<br>
-        Описание : {{ recipe.description }}<br>
-        _______________________________________________  
-    </p>
-
+        {{ recipe.category }}<br>
+        Описание : {{ recipe.description }}<br> 
+    
+        </div>
+    </div>
     {% endfor %}
 
 {% endblock %}
